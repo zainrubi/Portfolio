@@ -46,27 +46,27 @@ const PRIMARY_PROJECT = {
   modules: [
     {
       title: "Admissions & Enrollment Pipeline",
-      description: "Applicant processing, document verification, and batch enrollment flows.",
+      description: "",
     },
     {
       title: "Student & Faculty Registry",
-      description: "Centralized identity database with academic history and course allocations.",
+      description: "",
     },
     {
       title: "Fee Accounting & Billing Engine",
-      description: "Automated fee schedules, transaction ledgers, and receipt tracking.",
+      description: "",
     },
     {
       title: "Attendance & Audit Records",
-      description: "Course-specific attendance logging with tamper-proof administrative logs.",
+      description: "",
     },
     {
       title: "Role-Specific User Portals",
-      description: "Dedicated interfaces for administrators, instructors, and enrolled students.",
+      description: "",
     },
     {
       title: "Role-Based Access Control (RBAC)",
-      description: "Strict granular permissions and route guards across server endpoints.",
+      description: "",
     },
   ],
 };
@@ -279,16 +279,20 @@ export function Projects() {
 
                     {/* Action area reflecting current build state */}
                     <div className="shrink-0 flex items-center gap-2">
-                      <div className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-mono text-slate-300 bg-slate-900 border border-slate-800">
-                        <Clock className="h-3.5 w-3.5 text-emerald-400" />
-                        <span>Active Development</span>
-                      </div>
+                      <a
+                        href="https://college-management-system-five-amber.vercel.app/?utm_source=chatgpt.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-3.5 rounded py-2 text-xs font-mono text-sky-300 bg-sky-500/30 border border-sky-400/60 hover:bg-sky-500/20 hover:border-sky-300 transition-colors"
+                      >
+                        View Project / Live Demo
+                      </a>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column: Architectural Blueprint Panel (5 cols) */}
-                <div className="lg:col-span-5 bg-[#08090d] border border-white/[0.08] p-5 sm:p-6 flex flex-col justify-between">
+                <div className="lg:col-span-5 bg-[#08090d] border border-white/[0.08] p-5 mt-[32%] sm:p-6 flex flex-col justify-between">
                   <div>
                     {/* Panel Header */}
                     <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
@@ -311,12 +315,7 @@ export function Projects() {
                         </span>
                         <div className="mt-1 p-2.5 bg-slate-900/60 border border-slate-800/60 text-slate-300 space-y-1">
                           <p className="text-white font-medium">Next.js 16 + React 19 + TypeScript</p>
-                          <p className="text-slate-400 text-[11px]">
-                            • Multi-tenant role-based layout router
-                          </p>
-                          <p className="text-slate-400 text-[11px]">
-                            • Tailored views for Admin, Teacher &amp; Student
-                          </p>
+                          
                         </div>
                       </div>
 
@@ -326,12 +325,7 @@ export function Projects() {
                         </span>
                         <div className="mt-1 p-2.5 bg-slate-900/60 border border-slate-800/60 text-slate-300 space-y-1">
                           <p className="text-white font-medium">Node.js + Express REST API</p>
-                          <p className="text-slate-400 text-[11px]">
-                            • Modular controllers &amp; business validators
-                          </p>
-                          <p className="text-slate-400 text-[11px]">
-                            • RBAC guards &amp; session tokens
-                          </p>
+                         
                         </div>
                       </div>
 
@@ -341,12 +335,7 @@ export function Projects() {
                         </span>
                         <div className="mt-1 p-2.5 bg-slate-900/60 border border-slate-800/60 text-slate-300 space-y-1">
                           <p className="text-white font-medium">MongoDB Document Architecture</p>
-                          <p className="text-slate-400 text-[11px]">
-                            • Institutional schema: Students, Faculty, Courses
-                          </p>
-                          <p className="text-slate-400 text-[11px]">
-                            • Transactional audit records for fee payments
-                          </p>
+                         
                         </div>
                       </div>
                     </div>
