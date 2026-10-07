@@ -171,7 +171,7 @@ export function Capabilities() {
                     <h4 className="text-base font-bold text-white tracking-tight mb-2.5">
                       {card.title}
                     </h4>
-
+                  
                     {/* Back Description */}
                     <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       {card.backDescription}
