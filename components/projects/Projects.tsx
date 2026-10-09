@@ -3,12 +3,14 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 
-type ProjectStatus = "In Development" | "Planned" | "Concept";
+type ProjectStatus = "In Development" | "Planned" | "Concept" | "Completed";
 
 interface SecondaryProject {
   title: string;
   status: ProjectStatus;
   description: string;
+  technologies?: string;
+  link?: string;
 }
 
 const PRIMARY_PROJECT = {
@@ -16,34 +18,40 @@ const PRIMARY_PROJECT = {
   status: "In Development" as ProjectStatus,
   description:
     "A complete college management platform covering admissions, students, teachers, administration, fees, attendance, portals, and role-based workflows.",
-  technologies: "Next.js · TypeScript · Tailwind CSS · Node.js · Express · MongoDB",
+  technologies: "Next.js · TypeScript · Tailwind CSS · PostgreSQL · Prisma · JWT",
   caseStudyUrl: "https://college-management-system-five-amber.vercel.app/",
 };
 
 const SECONDARY_PROJECTS: SecondaryProject[] = [
   {
+    title: "DevConnect, Developer Social Platform",
+    status: "Completed",
+    description:
+      "A full MERN social platform with JWT auth, profile management, posts, comments, likes, and feed pagination with database indexing improving load times by 35%. Deployed on Vercel and Render.",
+    technologies: "MongoDB · Express.js · React · Node.js",
+    link: "https://github.com/zainahmad-dev",
+  },
+  {
+    title: "ShopEase, E-commerce Web App",
+    status: "Completed",
+    description:
+      "An e-commerce application with product catalog, cart, checkout, order history with protected admin dashboard, bcrypt password hashing, and Stripe test payment processing.",
+    technologies: "MERN · Redux Toolkit · Stripe · Cloudinary",
+    link: "https://github.com/zainahmad-dev",
+  },
+  {
     title: "Personal Finance Manager",
     status: "Planned",
     description:
       "A personal finance system for salaried users to manage salary, expenses, savings, budgets, recurring payments, and financial records.",
+    technologies: "Next.js · TypeScript · PostgreSQL",
   },
   {
     title: "Business Operations Management System",
     status: "Concept",
     description:
       "A management platform for employees, inventory, tasks, expenses, suppliers, orders, and operational workflows.",
-  },
-  {
-    title: "Appointment & Booking Management System",
-    status: "Concept",
-    description:
-      "A system for managing customers, services, availability, appointments, schedules, cancellations, and booking history.",
-  },
-  {
-    title: "Client & Service Management SaaS",
-    status: "Concept",
-    description:
-      "A SaaS platform for freelancers and agencies to manage clients, projects, tasks, deadlines, invoices, payments, and team workflows.",
+    technologies: "Full-Stack Enterprise Architecture",
   },
 ];
 
@@ -53,6 +61,15 @@ function StatusBadge({ status }: { status: ProjectStatus }) {
       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-sky-300 bg-sky-500/10 border border-sky-500/20">
         <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
         In Development
+      </span>
+    );
+  }
+
+  if (status === "Completed") {
+    return (
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20">
+        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+        Completed
       </span>
     );
   }
@@ -131,8 +148,19 @@ export function Projects() {
               className="rounded-2xl bg-[#0c0f17]/70 border border-white/[0.08] p-6 sm:p-8 hover:border-slate-700/80 transition-colors duration-200 flex flex-col justify-between"
             >
               <div>
-                <div className="mb-4">
+                <div className="mb-4 flex items-center justify-between">
                   <StatusBadge status={project.status} />
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-mono text-slate-400 hover:text-white transition-colors inline-flex items-center gap-1"
+                    >
+                      GitHub
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight leading-snug">
                   {project.title}
@@ -140,6 +168,11 @@ export function Projects() {
                 <p className="mt-3 text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
                   {project.description}
                 </p>
+                {project.technologies && (
+                  <p className="mt-4 pt-3 border-t border-white/[0.05] text-xs font-mono text-slate-400">
+                    {project.technologies}
+                  </p>
+                )}
               </div>
             </div>
           ))}

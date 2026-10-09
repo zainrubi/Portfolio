@@ -143,12 +143,11 @@ export function MobileMenu({
         <div className="pt-6 border-t border-slate-800/70">
           <Button
             href={resumeUrl}
-            target="_blank"
             variant="primary"
             size="md"
             className="w-full justify-center"
             icon={<ArrowUpRight className="h-4 w-4" />}
-            onClick={() => onClose()}
+            onClick={() => handleLinkClick(resumeUrl)}
           >
             Resume
           </Button>

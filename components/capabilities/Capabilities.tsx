@@ -166,12 +166,12 @@ export function Capabilities() {
                       <span className="font-mono text-[10px] text-sky-400/80 uppercase tracking-wider px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40">
                         System Spec
                       </span>
-                    </div>
+                     </div>
 
                     <h4 className="text-base font-bold text-white tracking-tight mb-2.5">
                       {card.title}
-                    </h4>
                   
+                    </h4>
                     {/* Back Description */}
                     <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       {card.backDescription}

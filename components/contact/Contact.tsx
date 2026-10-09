@@ -125,7 +125,7 @@ export function Contact() {
                 
                 {/* Email */}
                 <a
-                  href="mailto:zainrubii276@gmail.com"
+                  href="mailto:zain.ahmad.dev@gmail.com"
                   className="group flex items-center justify-between p-4 rounded-xl bg-[#0c0f17]/70 border border-white/[0.08] hover:border-slate-700/80 hover:bg-[#0c0f17] transition-all duration-200"
                 >
                   <div className="flex items-center gap-3.5 min-w-0">
@@ -137,7 +137,7 @@ export function Contact() {
                         Email Address
                       </span>
                       <span className="block text-sm sm:text-base font-semibold text-white group-hover:text-sky-300 transition-colors truncate mt-0.5">
-                        zainrubii276@gmail.com
+                        zain.ahmad.dev@gmail.com
                       </span>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ export function Contact() {
                     </div>
                     <div className="min-w-0">
                       <span className="block text-xs font-medium text-slate-400 uppercase tracking-wider">
-                        Phone Number
+                        Phone &amp; WhatsApp
                       </span>
                       <span className="block text-sm sm:text-base font-semibold text-white group-hover:text-emerald-300 transition-colors truncate mt-0.5">
                         03086573309
@@ -170,8 +170,8 @@ export function Contact() {
 
             {/* Quick response note */}
             <div className="mt-8 pt-6 border-t border-white/[0.06]">
-              <p className="text-xs text-slate-500 font-normal">
-                Based in Pakistan (GMT+5) • Responsive across all communication channels.
+              <p className="text-xs text-slate-400 font-normal">
+                Based in Lahore, Punjab, PK (GMT+5) • Responsive across all communication channels.
               </p>
             </div>
           </div>

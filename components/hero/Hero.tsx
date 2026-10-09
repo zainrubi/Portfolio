@@ -131,6 +131,10 @@ export function Hero() {
                 size="lg"
                 icon={<FileText className="h-4 w-4 text-slate-400" />}
                 className="w-full sm:w-auto px-7"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 Resume
               </Button>
@@ -139,7 +143,7 @@ export function Hero() {
             {/* Subtle Professional Profiles */}
             <div className="flex items-center justify-center lg:justify-start gap-4 text-slate-400">
               <a
-                href="https://github.com"
+                href="https://github.com/zainahmad-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
@@ -149,7 +153,7 @@ export function Hero() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/zainahmad-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -159,7 +163,7 @@ export function Hero() {
               </a>
 
               <a
-                href="mailto:zainrubii276@gmail.com"
+                href="mailto:zain.ahmad.dev@gmail.com"
                 aria-label="Email Zain Ahmad"
                 className="p-2.5 rounded-lg border border-slate-800/80 bg-slate-900/60 text-slate-400 hover:text-slate-100 hover:border-slate-700 hover:bg-slate-800/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >

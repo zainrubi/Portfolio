@@ -30,14 +30,26 @@ export function About() {
     {
       label: "Education",
       title: "BS Software Engineering",
-      institution: "Virtual University",
+      institution: "Virtual University of Pakistan (2023–2027)",
       badge: "Degree",
+    },
+    {
+      label: "Certification",
+      title: "Meta Front-End Developer",
+      institution: "Professional Certificate · Coursera",
+      badge: "Certified",
+    },
+    {
+      label: "Certification",
+      title: "MongoDB Associate Developer",
+      institution: "Official Path · MongoDB University",
+      badge: "Certified",
     },
     {
       label: "Professional Training",
       title: "MERN Stack Development",
       institution: "Techzoq Institute",
-      badge: "Certified",
+      badge: "Completed",
     },
   ];
 

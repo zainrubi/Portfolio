@@ -14,17 +14,17 @@ import {
 
 const OPPORTUNITIES = [
   {
-    title: "Freelance Projects",
-    description: "Building responsive web applications, dashboards, and custom management tools for clients.",
-    icon: Briefcase,
-  },
-  {
-    title: "Development Teams",
-    description: "Joining engineering squads as a dedicated full-stack developer eager to contribute and learn.",
+    title: "Full-Stack Roles",
+    description: "Joining engineering teams as a dedicated full-stack developer eager to build and contribute.",
     icon: Users,
   },
   {
-    title: "Startups & Businesses",
+    title: "Freelance & Client Builds",
+    description: "Architecting responsive web applications, dashboards, and custom management platforms.",
+    icon: Briefcase,
+  },
+  {
+    title: "Startups & Ventures",
     description: "Collaborating with emerging ventures to prototype, architect, and launch core digital systems.",
     icon: Building,
   },
@@ -34,17 +34,21 @@ const OPPORTUNITIES = [
     icon: GraduationCap,
   },
   {
-    title: "Real-World Web Applications",
-    description: "Engineering practical systems focused on accountability, usability, and robust data flow.",
+    title: "SaaS Platforms & APIs",
+    description: "Engineering resilient multi-tenant platforms, database schemas, and RESTful API services.",
     icon: Code2,
+  },
+  {
+    title: "System Architecture",
+    description: "Designing clean data models, state flows, and production-ready full-stack foundations.",
+    icon: Sparkles,
   },
 ];
 
-const INTERNSHIP_HIGHLIGHTS = [
-  "Hands-on component architecture and responsive interface development",
-  "Modern frontend state management with React and JavaScript (ES6+)",
-  "Full-stack workflow patterns with Node.js, Express, and REST APIs",
-  "Code quality discipline, modular file structure, and debugging practices",
+const FREELANCE_HIGHLIGHTS = [
+  "Delivered responsive websites and web apps for local clients using React, Node.js, and MongoDB",
+  "Translated client requirements into working features, wireframes, and REST APIs",
+  "Maintained clean Git workflow with feature branches, code reviews, and meaningful commits",
 ];
 
 export function Experience() {
@@ -93,7 +97,7 @@ export function Experience() {
             Experience &amp; Collaboration
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed font-normal">
-            Practical development background and current availability for engineering teams, businesses, and impactful builds.
+            Practical development background, client solutions, and current availability for engineering teams and impactful builds.
           </p>
         </div>
 
@@ -104,40 +108,40 @@ export function Experience() {
           }`}
         >
           
-          {/* Column 1: Practical Experience (Internship) */}
+          {/* Column 1: Practical Experience (Freelance & Training) */}
           <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl bg-[#0c0f17]/70 border border-white/[0.08] p-6 sm:p-8 hover:border-slate-700/80 transition-colors duration-200">
             <div>
               {/* Header Badge */}
               <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
-                  Practical Experience
+                  Work Experience
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-sky-300 bg-sky-500/10 border border-sky-500/20">
-                  <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
-                  Internship
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  2024 – Present
                 </span>
               </div>
 
               {/* Role & Company */}
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
-                Web Development Intern
+                Freelance Full-Stack Developer
               </h3>
               <p className="text-base font-medium text-slate-300 mt-1">
-                Techzoq Institute
+                Remote · Contract / Client Solutions
               </p>
 
               {/* Narrative Description */}
               <p className="mt-4 text-sm sm:text-base text-slate-400 leading-relaxed font-normal">
-                Gained intensive, hands-on experience in modern web development through structured project builds and real-world exercises. Strengthened core frontend and full-stack engineering skills by architecting clean component systems, implementing interactive interfaces, and connecting backend services.
+                Delivering responsive websites, admin interfaces, and custom web applications for clients. Translating client requirements into clean database schemas, predictable state management, and reliable RESTful APIs.
               </p>
 
               {/* Focus Points */}
               <div className="mt-6 pt-6 border-t border-white/[0.06]">
                 <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-3.5">
-                  Core Learnings &amp; Focus
+                  Core Highlights &amp; Execution
                 </h4>
                 <ul className="space-y-2.5">
-                  {INTERNSHIP_HIGHLIGHTS.map((item) => (
+                  {FREELANCE_HIGHLIGHTS.map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400 leading-normal">
                       <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
@@ -147,9 +151,10 @@ export function Experience() {
               </div>
             </div>
 
-            {/* Bottom Note */}
-            <div className="mt-8 pt-4 border-t border-white/[0.06] text-xs text-slate-500 font-normal">
-              Practical foundation in production-oriented web development practices.
+            {/* Bottom Training Context */}
+            <div className="mt-8 pt-4 border-t border-white/[0.06] text-xs text-slate-400 font-normal flex items-center justify-between">
+              <span>Prior: Web Dev Intern (Techzoq Institute)</span>
+              <span className="text-[11px] font-mono text-slate-400">MERN Certified</span>
             </div>
           </div>
 

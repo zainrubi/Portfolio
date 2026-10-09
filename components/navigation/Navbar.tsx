@@ -13,6 +13,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -26,7 +27,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Simple intersection check for active section
-      const sections = ["hero", "about", "work", "skills", "experience", "contact"];
+      const sections = ["hero", "about", "work", "skills", "experience", "resume", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -102,6 +103,10 @@ export function Navbar() {
               size="sm"
               icon={<ArrowUpRight className="h-3.5 w-3.5" />}
               className="text-xs font-mono font-medium"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Resume
             </Button>
@@ -114,6 +119,10 @@ export function Navbar() {
               variant="outline"
               size="sm"
               className="text-xs px-2.5 py-1"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Resume
             </Button>
